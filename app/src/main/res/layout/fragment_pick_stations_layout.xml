@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="be.howest.nmct.android.nmbsbruggekortrijk.app.PickStationsFragment"
+    android:orientation="horizontal"
+    android:id="@+id/innerFragmentroot">
+
+    <!-- TODO: Update blank fragment layout -->
+    <AutoCompleteTextView
+        android:hint="@string/station_a"
+        android:singleLine="true"
+        android:completionThreshold="3"
+        android:id="@+id/stationEditText1"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <ImageButton
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <AutoCompleteTextView
+        android:hint="@string/station_b"
+        android:singleLine="true"
+        android:completionThreshold="3"
+        android:id="@+id/stationEditText2"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
