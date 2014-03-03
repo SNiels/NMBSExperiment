@@ -4,14 +4,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import be.howest.nmct.android.nmbsbruggekortrijk.app.ConnectionActivity;
 import be.howest.nmct.android.nmbsbruggekortrijk.app.R;
+import be.howest.nmct.android.nmbsbruggekortrijk.app.RouteActivity;
 import be.irail.api.IRail;
 import be.irail.api.data.Connection;
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
 
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 
 /**
@@ -56,12 +55,11 @@ public class NmbsExtension extends DashClockExtension{
             Log.d(TAG,ex.getMessage());
             return;
         }
-
-
+        if(connection==null)return;
         String leave =new SimpleDateFormat("H:mm").format(connection.getDeparture().getTime());
         String arrive =new SimpleDateFormat("H:mm").format(connection.getArrival().getTime());
-        Intent i = new Intent(getApplicationContext(),ConnectionActivity.class);
-        i.putExtra(ConnectionActivity.CONNECTION,(Serializable)connection);
+        Intent i = new Intent(getApplicationContext(), RouteActivity.class);
+       // i.putExtra(ConnectionActivity.CONNECTION,(Serializable)connection);
         publishUpdate(new ExtensionData()
                 .visible(true)
                 .icon(R.drawable.ic_launcher)

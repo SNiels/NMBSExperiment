@@ -73,6 +73,7 @@
             android:value="AIzaSyBF4TEq7574DlurZoZ0hFdfwXuTci31Rqw" />
 
         <activity
+            android:exported="true"
             android:theme="@style/AppTheme.TranslucentActionBar"
             android:parentActivityName=".RouteActivity"
             android:name="be.howest.nmct.android.nmbsbruggekortrijk.app.ConnectionActivity"

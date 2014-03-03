@@ -42,6 +42,7 @@ public class ConnectionActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         connection =(Connection)getIntent().getSerializableExtra(CONNECTION);
+       // Log.d("Connection in connectionactivity",connection.toString());
         from=(TextView)findViewById(R.id.from);
         to =(TextView)findViewById(R.id.to);
         fromTime=(TextView)findViewById(R.id.fromTime);
