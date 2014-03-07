@@ -17,5 +17,6 @@
     <string name="extension_title">NMBS</string>
     <string name="extension_description">Geeft de eerste trein weer van een station naar een andere</string>
     <string name="title_settings">Dashclock settings</string>
+    <string name="title_activity_main_activity2">MainActivity</string>
 
 </resources>

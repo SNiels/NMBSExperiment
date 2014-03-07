@@ -23,6 +23,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+            android:launchMode="singleTop"
             android:name="be.howest.nmct.android.nmbsbruggekortrijk.app.MainActivity"
             android:label="@string/app_name" >
 
@@ -35,7 +36,6 @@
             -->
         </activity>
         <activity
-            android:launchMode="singleTop"
             android:name="be.howest.nmct.android.nmbsbruggekortrijk.app.RouteActivity"
             android:label="@string/title_activity_route_layout" >
             <intent-filter>
@@ -45,25 +45,34 @@
             </intent-filter>
         </activity>
 
-        <service android:name="be.howest.nmct.android.nmbsbruggekortrijk.dashclock.NmbsExtension"
-                 android:icon="@drawable/ic_launcher"
-                 android:label="@string/extension_title"
-                 android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+        <service
+            android:name="be.howest.nmct.android.nmbsbruggekortrijk.dashclock.NmbsExtension"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/extension_title"
+            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA" >
             <intent-filter>
                 <action android:name="com.google.android.apps.dashclock.Extension" />
             </intent-filter>
-            <meta-data android:name="protocolVersion" android:value="2" />
-            <meta-data android:name="worldReadable" android:value="true" />
-            <meta-data android:name="description"
-                       android:value="@string/extension_description" />
+
+            <meta-data
+                android:name="protocolVersion"
+                android:value="2" />
+            <meta-data
+                android:name="worldReadable"
+                android:value="true" />
+            <meta-data
+                android:name="description"
+                android:value="@string/extension_description" />
             <!-- A settings activity is optional -->
-            <meta-data android:name="settingsActivity"
-                       android:value="be.howest.nmct.android.nmbsbruggekortrijk.dashclock.NmbsSettings" />
+            <meta-data
+                android:name="settingsActivity"
+                android:value="be.howest.nmct.android.nmbsbruggekortrijk.dashclock.NmbsSettings" />
         </service>
 
-        <activity android:name="be.howest.nmct.android.nmbsbruggekortrijk.dashclock.NmbsSettings"
-                  android:label="@string/title_settings"
-                  android:exported="true" />
+        <activity
+            android:name="be.howest.nmct.android.nmbsbruggekortrijk.dashclock.NmbsSettings"
+            android:exported="true"
+            android:label="@string/title_settings" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -73,11 +82,13 @@
             android:value="AIzaSyBF4TEq7574DlurZoZ0hFdfwXuTci31Rqw" />
 
         <activity
-            android:exported="true"
-            android:theme="@style/AppTheme.TranslucentActionBar"
-            android:parentActivityName=".RouteActivity"
             android:name="be.howest.nmct.android.nmbsbruggekortrijk.app.ConnectionActivity"
-            android:label="@string/title_activity_connection" >
+            android:exported="true"
+            android:label="@string/title_activity_connection"
+            android:parentActivityName="be.howest.nmct.android.nmbsbruggekortrijk.app.RouteActivity"
+            android:theme="@style/AppTheme.TranslucentActionBar" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value="MainActivity" />
         </activity>
     </application>
 
