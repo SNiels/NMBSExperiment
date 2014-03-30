@@ -1,9 +1,6 @@
 package be.howest.nmct.android.nmbsbruggekortrijk.app;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -104,7 +101,7 @@ public class ConnectionActivity extends ActionBarActivity {
 
 
             // Respond to the action bar's Up/Home button
-            case android.R.id.home:
+            /*case android.R.id.home:
                 //onBackPressed();
                 Intent upIntent = NavUtils.getParentActivityIntent(this);
                 if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
@@ -119,7 +116,7 @@ public class ConnectionActivity extends ActionBarActivity {
                     // This activity is part of this app's task, so simply
                     // navigate up to the logical parent activity.
                     NavUtils.navigateUpTo(this, upIntent);
-                }
+                }*/
                 //return true;
             case R.id.action_settings:
                 return true;

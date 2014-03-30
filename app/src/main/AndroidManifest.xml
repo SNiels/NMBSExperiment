@@ -36,6 +36,7 @@
             -->
         </activity>
         <activity
+            android:launchMode="singleTop"
             android:name="be.howest.nmct.android.nmbsbruggekortrijk.app.RouteActivity"
             android:label="@string/title_activity_route_layout" >
             <intent-filter>
@@ -70,9 +71,13 @@
         </service>
 
         <activity
+            android:parentActivityName="be.howest.nmct.android.nmbsbruggekortrijk.app.RouteActivity"
             android:name="be.howest.nmct.android.nmbsbruggekortrijk.dashclock.NmbsSettings"
             android:exported="true"
-            android:label="@string/title_settings" />
+            android:label="@string/title_settings" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value="MainActivity" />
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
